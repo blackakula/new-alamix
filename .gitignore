@@ -1,3 +1,5 @@
 config/base.yml
 *~
 app/views/*/*.php
+public/css/*
+.sass-cache/*

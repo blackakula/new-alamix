@@ -1,0 +1,22 @@
+$main_color: #3A3734;
+$rigth_bg_color: #000000;
+
+$main_width: 1000px;
+$left_col_width: 460px;
+$title_text_height: 80px;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $main_color;
+}
+.abc {
+  width:$main_width;
+  margin:0 auto;
+}
+.clear {
+  height: 0;
+  width: 0;
+  float: 0;
+  clear: both;
+}

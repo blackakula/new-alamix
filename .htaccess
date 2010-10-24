@@ -4,10 +4,18 @@ Options +FollowSymLinks -Indexes
   RewriteEngine On
   RewriteBase /
 
+  RewriteCond %{REQUEST_URI} ^/css/.
+  RewriteRule ^(.*)$ public/$1 [L]
+
   RewriteCond %{ENV:REDIRECT_STATUS} ^$
   RewriteCond %{REQUEST_URI} ^/public/index\.php(\?path=)?
   RewriteRule ^(.*)$ public/index.php [L,QSA]
 
   RewriteCond %{REQUEST_URI} !^/public/index\.php(\?path=)?
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ public/index.php [L,QSA]
+
+  RewriteCond %{REQUEST_URI} !^/public/index\.php(\?path=)?
+  RewriteCond %{REQUEST_URI} !^/public/(css)/.
   RewriteRule ^(.*)$ public/index.php [L,QSA]
 </IfModule>
