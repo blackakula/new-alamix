@@ -1,21 +1,9 @@
+- $this->setMenu()
 .menu
-  .item.news
-    - $this->set('menu_item_text', 'новини')
-    - $this->_include('menu_item1')
-  .item-mid
-  .item.media
-    - $this->set('menu_item_text', 'медіа')
-    - $this->_include('menu_item2')
-  .item-mid
-  .item.links
-    - $this->set('menu_item_text', 'лінки')
-    - $this->_include('menu_item1')
-  .item-mid
-  .item.portfolio
-    - $this->set('menu_item_text', 'портфоліо')
-    - $this->_include('menu_item2')
-  .item-mid
-  .item.contacts
-    - $this->set('menu_item_text', 'контакти')
-    - $this->_include('menu_item1')
-  .clear
+  - foreach ($this->get('menu') as $menu_index => $menu_item)
+    - if ($menu_index != 0)
+      .item-mid
+    - $this->set('menu_item_class', $menu_item[1]);
+    .item.$menu_item_class
+      - $this->set('menu_item_text', $menu_item[0])
+      - $this->_include('menu_item'.($menu_item[2] ? '1' : '2'))

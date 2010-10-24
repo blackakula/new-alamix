@@ -27,5 +27,15 @@
       if (is_null($array) || $array === false) return false;
       return array($params[1],$array);
     }
+
+    public function setMenu() {
+      $this->set('menu', array(
+          array('новини', 'news', true),
+          array('медіа', 'media', false),
+          array('лінки', 'links', true),
+          array('портфоліо', 'portfolio', false),
+          array('контакти', 'contacts', true)
+      ));
+    }
   }
 ?>
