@@ -20,3 +20,9 @@ body {
   float: 0;
   clear: both;
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underlined;
+}
