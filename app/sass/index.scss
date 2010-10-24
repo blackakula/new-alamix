@@ -9,6 +9,10 @@ $menu_box_height: $menu_top + $menu_height;
   background-color: $rigth_bg_color;
 }
 
+.abc-right {
+  background-color: $rigth_bg_color;
+}
+
 .abc-left {
   width: $left_col_width;
   background-color: $main_color;
@@ -27,14 +31,10 @@ $menu_box_height: $menu_top + $menu_height;
   top: $menu_top;
 }
 
-.title-text-box, .copyright-box, .pic-box {
+.title-text-box, .copyright-box, .pic-box, .abc-right {
   width: $main_width - $left_col_width;
 }
 
 .title-text-box {
   height: $title_text_height;
-}
-
-.abc-left {
-  float: left;
 }
