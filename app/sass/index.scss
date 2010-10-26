@@ -5,39 +5,33 @@ $menu_top: 30px;
 $menu_box_height: $menu_top + $menu_height;
 
 .abc-index {
-  width: $main_width;
-  background-color: $rigth_bg_color;
+  overflow: hidden;
+  min-width: $menu_width / $left_col_width;
 }
-
-.abc-right {
-  background-color: $rigth_bg_color;
-  overflow: visible;
+.abc-left, .abc-right {
+  float: left;
+  margin-bottom: -$very_large_outside;
+  padding-bottom: $very_large_outside;
 }
 
 .abc-left {
-  width: $left_col_width / 2;
-  background-color: $main_color;
+  width: $left_col_width*100%;
   
   .menu-box {
     height: $menu_box_height;
-    width: $menu_width / 2;
-    overflow: visible;
+    width: 50%;
+    position: relative;
+    left: 50%;
   }
 }
 
 .menu {
   position: relative;
   top: $menu_top;
-  left: -$menu_width / 2;
+  margin-left: -$menu_width / 2;
 }
 
 .abc-right {
-  width: $main_width - $left_col_width;
-}
-.title-text-box, .copyright-box, .pic-box {
-  width: 100%;
-}
-
-.title-text-box {
-  height: $title_text_height;
+  background-color: $rigth_bg_color;
+  width: ($main_width - $left_col_width)*100%;
 }
