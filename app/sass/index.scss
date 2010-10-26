@@ -14,14 +14,13 @@ $menu_box_height: $menu_top + $menu_height;
   overflow: visible;
 }
 
-.abc-left1, .abc-left2 {
+.abc-left {
   width: $left_col_width / 2;
   background-color: $main_color;
-}
-.abc-left2 {
+  
   .menu-box {
     height: $menu_box_height;
-    width: 0;
+    width: $menu_width / 2;
     overflow: visible;
   }
 }
