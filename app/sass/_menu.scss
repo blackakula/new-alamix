@@ -6,6 +6,7 @@ $menu_mid_space: 10px;
 $items_count: 5;
 
 $menu_height: 2 * $menu_bookmark_h + $menu_text_h;
+$menu_width: $items_count * $menu_item_w + ($items_count - 1) * $menu_mid_space;
 
 $menu_news_color: #90ABBD;
 $menu_media_color: #6AC334;
@@ -14,7 +15,7 @@ $menu_portfolio_color: #EC3A3E;
 $menu_contacts_color: #F47E36;
 
 .menu {
-  width: $items_count * $menu_item_w + ($items_count - 1) * $menu_mid_space;
+  width: $menu_width;
   .item {
     width: $menu_item_w;
     float: left;

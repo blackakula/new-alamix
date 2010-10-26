@@ -11,28 +11,32 @@ $menu_box_height: $menu_top + $menu_height;
 
 .abc-right {
   background-color: $rigth_bg_color;
+  overflow: visible;
 }
 
-.abc-left {
-  width: $left_col_width;
+.abc-left1, .abc-left2 {
+  width: $left_col_width / 2;
   background-color: $main_color;
-
+}
+.abc-left2 {
   .menu-box {
     height: $menu_box_height;
-    width: $left_col_width;
-  }
-  .content {
-    width: $left_col_width;
+    width: 0;
+    overflow: visible;
   }
 }
 
 .menu {
   position: relative;
   top: $menu_top;
+  left: -$menu_width / 2;
 }
 
-.title-text-box, .copyright-box, .pic-box, .abc-right {
+.abc-right {
   width: $main_width - $left_col_width;
+}
+.title-text-box, .copyright-box, .pic-box {
+  width: 100%;
 }
 
 .title-text-box {
