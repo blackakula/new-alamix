@@ -48,12 +48,16 @@ $menu_font: Arial;
 }
 .menu-text-inner {
   position: relative;
-  top: -15px;
+  top: -13px;
   width: $menu_item_w;
   text-align: center;
   font-family: $menu_font;
   font-size: 10pt;
   display: block;
+}
+
+.menu a:hover {
+  text-decoration: none;
 }
 
 
