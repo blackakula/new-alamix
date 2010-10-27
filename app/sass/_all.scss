@@ -1,15 +1,25 @@
 $main_color: #3A3734;
 $rigth_bg_color: #000000;
+$title_color: #FFFFFF;
+$copyright_color: $title_color;
 
 $main_width: 1;
 $left_col_width: 0.46;
+$right_col_width: $main_width - $left_col_width;
 $very_large_outside: 10000px;
-$title_text_height: 80px;
+$title_text_height: 60px;
+$copyright_height: 20px;
+$copyright_up_margin: 15px;
+$footer_bottom_margin: 40px;
+
+$all_font: Arial;
 
 body {
   margin: 0;
   padding: 0;
   background-color: $main_color;
+  font-family: $all_font;
+  font-size: 10pt;
 }
 .abc {
   width: $main_width*100%;
@@ -26,5 +36,5 @@ a {
   cursor: pointer;
 }
 a:hover {
-  text-decoration: underlined;
+  text-decoration: underline;
 }

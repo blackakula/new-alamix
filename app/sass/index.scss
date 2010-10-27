@@ -2,11 +2,30 @@
 @import 'menu';
 
 $menu_top: 30px;
+$title_top: $menu_top;
 $menu_box_height: $menu_top + $menu_height;
+$title_box_height: $title_top + $title_text_height;
+
+$content_up_margin: 30px;
+$pic_box_up_margin: $content_up_margin;
+
+$title_text_width: 460px;
+$content_width: $menu_width;
+
+$pic_height: 320px;
+$pic_width: 240px;
+
+$min_width1: $menu_width / $left_col_width;
+$min_width2: $title_text_width / $right_col_width;
+$min_width3: (2 * $pic_width + 4 * 10px) / $right_col_width;
+$min_width4: $content_width / $left_col_width;
 
 .abc-index {
-  overflow: hidden;
-  min-width: $menu_width / $left_col_width;
+  overflow: hidden; 
+  @if ($min_width1 > $min_width2) and ($min_width1 > $min_width3) and ($min_width1 > $min_width4) { min-width: $min_width1; }
+  @else if ($min_width2 > $min_width3) and ($min_width2 > $min_width4) { min-width: $min_width2; }
+  @else if ($min_width3 > $min_width4) { min-width: $min_width3; }
+  @else { min-width: $min_width4; }
 }
 .abc-left, .abc-right {
   float: left;
@@ -17,11 +36,20 @@ $menu_box_height: $menu_top + $menu_height;
 .abc-left {
   width: $left_col_width*100%;
   
-  .menu-box {
-    height: $menu_box_height;
+  .menu-box, .content-box {
     width: 50%;
     position: relative;
     left: 50%;
+  }
+  .menu-box {
+    height: $menu_box_height;
+  }
+  
+  .content {
+    margin: $content_up_margin 0 $footer_bottom_margin 0-$content_width/2;
+    width: $content_width;
+    height: 300px;
+    background-color: #FFFFFF;
   }
 }
 
@@ -34,4 +62,57 @@ $menu_box_height: $menu_top + $menu_height;
 .abc-right {
   background-color: $rigth_bg_color;
   width: ($main_width - $left_col_width)*100%;
+  
+  .title-text-box {
+    height: $title_box_height;
+    position: relative;
+    left: 50%;
+    width: 50%;
+    
+    h1.title {
+      margin: 0 0 0 0-$title_text_width/2;
+      color: $title_color;
+      position: relative;
+      top: $title_top;
+      font-size: 40pt;
+      width: $title_text_width;
+    }
+  }
+  
+  .copyright-box {
+    margin-right: 30px;
+    text-align: right;
+    color: $copyright_color;
+    font-size: 13pt;
+    height: $copyright_height;
+    margin-top: $copyright_up_margin;
+    a {
+      color: $copyright_color;
+    }
+  }
+  .pic-box {
+    height: $pic_height;
+    margin-top: $pic_box_up_margin;
+    margin-bottom: $footer_bottom_margin;
+    overflow: visible;
+    
+    .pic-box-inner {
+      height: $pic_height;
+      width: 25%;
+      position: relative;
+      display: inline;
+      left: 25%;
+      .pic { background-color: $menu_portfolio_color; }
+    }
+    .pic-right {
+      left: 75%;
+      top: -$pic_height;
+      .pic { background-color: $menu_media_color; }
+    }
+    .pic {
+      width: $pic_width;
+      height: $pic_height;
+      margin-left: -$pic_width / 2;
+    }
+  }
 }

@@ -2,11 +2,19 @@
   .abc-left
     .menu-box
       - $this->_include('menu')
-    .content
+    .content-box
+      .content Здесь будет контент. Нужен макет, чтоб продолжить его верстать.
   .abc-right
     .title-text-box
+      %h1.title= $this->get('title')
     .copyright-box
+      %span
+        &copy; 
+        %a{href="mailto:alya.mikhailova@gmail.com"}
+          Alya.Mikhailova
     .pic-box
-      .pic-left
-      .pic-right
+      .pic-box-inner
+        .pic
+      .pic-box-inner.pic-right
+        .pic
   .clear

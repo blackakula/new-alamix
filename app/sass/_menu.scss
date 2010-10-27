@@ -14,6 +14,8 @@ $menu_links_color: #F99E7E;
 $menu_portfolio_color: #EC3A3E;
 $menu_contacts_color: #F47E36;
 
+$menu_font: Arial;
+
 .menu {
   width: $menu_width;
   .item {
@@ -49,7 +51,7 @@ $menu_contacts_color: #F47E36;
   top: -15px;
   width: $menu_item_w;
   text-align: center;
-  font-family: Arial;
+  font-family: $menu_font;
   font-size: 10pt;
   display: block;
 }
