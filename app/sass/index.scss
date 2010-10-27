@@ -102,11 +102,11 @@ $min_width4: $content_width / $left_col_width;
       position: relative;
       display: inline;
       left: 25%;
+      float: left;
       .pic { background-color: $menu_portfolio_color; }
     }
     .pic-right {
-      left: 75%;
-      top: -$pic_height;
+      left: 50%;
       .pic { background-color: $menu_media_color; }
     }
     .pic {
