@@ -20,11 +20,11 @@ $min_width2: $title_text_width / $right_col_width;
 $min_width3: (2 * $pic_width + 4 * 10px) / $right_col_width;
 $min_width4: $content_width / $left_col_width;
 
-@mixin set-min-width($parameter, $inv: 1) {
-  @if ($min_width1 > $min_width2) and ($min_width1 > $min_width3) and ($min_width1 > $min_width4) { #{$parameter}: $inv*$min_width1; }
-  @else if ($min_width2 > $min_width3) and ($min_width2 > $min_width4) { #{$parameter}: $inv*$min_width2; }
-  @else if ($min_width3 > $min_width4) { #{$parameter}: $inv*$min_width3; }
-  @else { #{$parameter}: $inv*$min_width4; }
+@mixin set-min-width($parameter) {
+  @if ($min_width1 > $min_width2) and ($min_width1 > $min_width3) and ($min_width1 > $min_width4) { #{$parameter}: $min_width1; }
+  @else if ($min_width2 > $min_width3) and ($min_width2 > $min_width4) { #{$parameter}: $min_width2; }
+  @else if ($min_width3 > $min_width4) { #{$parameter}: $min_width3; }
+  @else { #{$parameter}: $min_width4; }
 }
 
 .abc-index {
