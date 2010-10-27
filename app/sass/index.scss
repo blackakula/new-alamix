@@ -20,12 +20,17 @@ $min_width2: $title_text_width / $right_col_width;
 $min_width3: (2 * $pic_width + 4 * 10px) / $right_col_width;
 $min_width4: $content_width / $left_col_width;
 
+@mixin set-min-width($parameter, $inv: 1) {
+  @if ($min_width1 > $min_width2) and ($min_width1 > $min_width3) and ($min_width1 > $min_width4) { #{$parameter}: $inv*$min_width1; }
+  @else if ($min_width2 > $min_width3) and ($min_width2 > $min_width4) { #{$parameter}: $inv*$min_width2; }
+  @else if ($min_width3 > $min_width4) { #{$parameter}: $inv*$min_width3; }
+  @else { #{$parameter}: $inv*$min_width4; }
+}
+
 .abc-index {
-  overflow: hidden; 
-  @if ($min_width1 > $min_width2) and ($min_width1 > $min_width3) and ($min_width1 > $min_width4) { min-width: $min_width1; }
-  @else if ($min_width2 > $min_width3) and ($min_width2 > $min_width4) { min-width: $min_width2; }
-  @else if ($min_width3 > $min_width4) { min-width: $min_width3; }
-  @else { min-width: $min_width4; }
+  overflow: hidden;
+  width: 100%;
+  @include set-min-width('min-width'); 
 }
 .abc-left, .abc-right {
   float: left;
@@ -33,14 +38,18 @@ $min_width4: $content_width / $left_col_width;
   padding-bottom: $very_large_outside;
 }
 
+.content-box, .menu-box, .title-text-box, .pic-box-inner {
+  position: relative;
+  width: 50%;
+  left: 50%;
+  overflow: visible;
+  padding-left: $very_large_outside;
+  margin-left: -$very_large_outside;
+}
+
 .abc-left {
   width: $left_col_width*100%;
   
-  .menu-box, .content-box {
-    width: 50%;
-    position: relative;
-    left: 50%;
-  }
   .menu-box {
     height: $menu_box_height;
   }
@@ -65,9 +74,6 @@ $min_width4: $content_width / $left_col_width;
   
   .title-text-box {
     height: $title_box_height;
-    position: relative;
-    left: 50%;
-    width: 50%;
     
     h1.title {
       margin: 0 0 0 0-$title_text_width/2;
@@ -94,13 +100,10 @@ $min_width4: $content_width / $left_col_width;
     height: $pic_height;
     margin-top: $pic_box_up_margin;
     margin-bottom: $footer_bottom_margin;
-    overflow: visible;
     
     .pic-box-inner {
       height: $pic_height;
       width: 25%;
-      position: relative;
-      display: inline;
       left: 25%;
       float: left;
       .pic { background-color: $menu_portfolio_color; }
