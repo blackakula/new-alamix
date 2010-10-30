@@ -3,7 +3,20 @@
     .menu-box
       - $this->_include('menu')
     .content-box
-      .content Здесь будет контент. Нужен макет, чтоб продолжить его верстать.
+      .content
+        - foreach ($this->get('content_items') as $item)
+          - $this->set('news_item_style', $item['style'])
+          .news-item-box.$news_item_style
+            .icons
+              - foreach (array_reverse($item['icons']) as $ico_type)
+                - $this->set('news_ico_type', $ico_type)
+                .icon.$news_ico_type
+              .clear
+            .category= $item['category']
+            .clear
+            .date= $item['date']
+            .title= $item['title']
+            .text= $item['text']
   .abc-right
     .title-text-box
       %h1.title= $this->get('title')
