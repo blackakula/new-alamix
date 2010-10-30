@@ -13,9 +13,8 @@ $title_text_width: 460px;
 $content_width: $menu_width;
 
 $pic_height: 440px;
-$pic_width1: 200px;
-$pic_width2: 300px;
-$pic_width: 240px;
+$pic_width1: 200;
+$pic_width2: 300;
 
 $content_icon_size: 8px;
 $content_v_spaces: 5px;
@@ -25,7 +24,7 @@ $content_text_width: $menu_width - $content_left_side;
 
 $min_width1: $menu_width / $left_col_width;
 $min_width2: $title_text_width / $right_col_width;
-$min_width3: ($pic_width1 + $pic_width2 + 4 * 10px) / $right_col_width;
+$min_width3: ($pic_width1 + $pic_width2 + 4 * 10) * 1px / $right_col_width;
 $min_width4: $content_width / $left_col_width;
 
 @mixin set-min-width($parameter) {
@@ -182,22 +181,23 @@ $min_width4: $content_width / $left_col_width;
     
     .pic-box-inner {
       height: $pic_height;
-      width: 25%;
-      left: 25%;
+      width: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
+      left: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
       float: left;
       .pic {
         background-color: $menu_portfolio_color;
         height: $pic_height;
-        width: $pic_width1;
-        margin-left: -$pic_width1 / 2;
+        width: $pic_width1 * 1px;
+        margin-left: -$pic_width1 * 1px / 2;
       }
     }
     .pic-right {
-      left: 50%;
+      left: ($pic_width1 / 2 + $pic_width2 / 2) * 100% / ($pic_width1 + $pic_width2);
+      width: $pic_width2 * 50% / ($pic_width1 + $pic_width2);
       .pic {
         background-color: $menu_media_color;
-        width: $pic_width2;
-        margin-left: -$pic_width2 / 2;
+        width: $pic_width2 * 1px;
+        margin-left: -$pic_width2 * 1px / 2;
       }
     }
 /*    .pic {
