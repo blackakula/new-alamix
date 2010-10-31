@@ -16,6 +16,9 @@ $pic_height: 440px;
 $pic_width1: 200;
 $pic_width2: 300;
 
+$pic_center1: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
+$pic_margin_left1: -$pic_width1 * 1px / 2;
+
 $content_icon_size: 8px;
 $content_v_spaces: 5px;
 $content_title_size: 18px;
@@ -45,11 +48,10 @@ $min_width4: $content_width / $left_col_width;
   padding-bottom: $very_large_outside;
 }
 
-.content-box, .menu-box, .title-text-box, .pic-box-inner {
+.content-box, .menu-box {
   position: relative;
   width: 50%;
   left: 50%;
-  overflow: visible;
   padding-left: $very_large_outside;
   margin-left: -$very_large_outside;
 }
@@ -150,30 +152,38 @@ $min_width4: $content_width / $left_col_width;
   background-color: $rigth_bg_color;
   width: ($main_width - $left_col_width)*100%;
   
+  .title-text-box, .pic-box-inner, .copyright-box {
+    position: relative;
+    left: $pic_center1;
+  }
+  .title-text-box h1.title, .pic-box-inner .pic, .copyright-box span {
+    margin-left: $pic_margin_left1;
+  }
+  
   .title-text-box {
     height: $title_box_height;
     
     h1.title {
-      margin: 0 0 0 0-$title_text_width/2;
+      margin: 0 0 0 $pic_margin_left1;
       color: $title_color;
       position: relative;
       top: $title_top;
-      font-size: 40pt;
+      font-size: 30pt;
       width: $title_text_width;
     }
   }
-  
+    
   .copyright-box {
-    margin-right: 30px;
-    text-align: right;
     color: $copyright_color;
     font-size: 13pt;
     height: $copyright_height;
     margin-top: $copyright_up_margin;
-    a {
+  
+    a, span {
       color: $copyright_color;
     }
   }
+  
   .pic-box {
     height: $pic_height;
     margin-top: $pic_box_up_margin;
@@ -182,13 +192,12 @@ $min_width4: $content_width / $left_col_width;
     .pic-box-inner {
       height: $pic_height;
       width: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
-      left: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
       float: left;
       .pic {
         background-color: $menu_portfolio_color;
         height: $pic_height;
         width: $pic_width1 * 1px;
-        margin-left: -$pic_width1 * 1px / 2;
+        margin-left: $pic_margin_left1;
       }
     }
     .pic-right {
@@ -200,10 +209,5 @@ $min_width4: $content_width / $left_col_width;
         margin-left: -$pic_width2 * 1px / 2;
       }
     }
-/*    .pic {
-      width: $pic_width;
-      height: $pic_height;
-      margin-left: -$pic_width / 2;
-    }*/
   }
 }
