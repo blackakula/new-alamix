@@ -6,7 +6,7 @@
       
       $content_items = array();
       foreach (array('news','media','portfolio') as $v) {
-      	$content_items[$v] = array('title' => 'Заголовок новини', 'style' => $v, 'date' => '30/X', 'text' => 'Текст новини. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis venenatis sollicitudin. Sed ac risus metus, et viverra tortor.');
+      	$content_items[$v] = array('title' => 'Заголовок новини', 'style' => $v, 'date' => '30/X', 'text' => 'Текст новини. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis venenatis sollicitudin.');
       }
       $content_items['news']['category'] = 'новини';
       $content_items['news']['icons'] = array('ico-media','ico-portfolio','ico-contacts');

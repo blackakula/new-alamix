@@ -11,6 +11,7 @@ $content_up_margin: 100px;
 
 $title_text_width: 460px;
 $content_width: $menu_width;
+$content_height: 56px;
 
 $pic_height: 440px;
 $pic_width1: 200;
@@ -139,6 +140,7 @@ $min_width4: $content_width / $left_col_width;
     color: #FFFFFF;
     font-size: 9pt;
     text-align: justify;
+    height: $content_height;
   }
 }
 
