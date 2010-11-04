@@ -9,11 +9,11 @@
       	$content_items[$v] = array('title' => 'Заголовок новини', 'style' => $v, 'date' => '30/X', 'text' => 'Текст новини. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis venenatis sollicitudin.');
       }
       $content_items['news']['category'] = 'новини';
-      $content_items['news']['icons'] = array('ico-media','ico-portfolio','ico-contacts');
+      $content_items['news']['icons'] = array('media','portfolio','contacts');
       $content_items['media']['category'] = 'медіа';
-      $content_items['media']['icons'] = array('ico-news','ico-contacts','ico-portfolio');
+      $content_items['media']['icons'] = array('news','contacts','portfolio');
       $content_items['portfolio']['category'] = 'портфоліо';
-      $content_items['portfolio']['icons'] = array('ico-contacts','ico-media','ico-news');
+      $content_items['portfolio']['icons'] = array('contacts','media','news');
       $this->set('content_items', $content_items);
     }
   }

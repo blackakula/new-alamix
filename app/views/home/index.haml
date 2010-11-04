@@ -5,13 +5,11 @@
     .content-box
       .content
         - foreach ($this->get('content_items') as $item)
-          - $this->set('news_item_style', $item['style'])
+          - $news_item_style = $item['style']
           .news-item-box.$news_item_style
             .icons
-              - foreach (array_reverse($item['icons']) as $ico_type)
-                - $this->set('news_ico_type', $ico_type)
-                .icon.$news_ico_type
-              .clear
+              - $this->set('squares-colors', $item['icons'])
+              - $this->_include('square_icons')
             .category= $item['category']
             .clear
             .date= $item['date']

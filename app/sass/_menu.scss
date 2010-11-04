@@ -62,48 +62,49 @@ $menu_font: Arial;
 
 
 /* Colors */
-.news {
-  .menu-bookmark, .menu-tail {
-    background-color: $menu_news_color;
+.menu {
+  .news {
+    .menu-bookmark, .menu-tail {
+      background-color: $menu_news_color;
+    }
+    .menu-text-inner {
+      color: $menu_news_color;
+    }
   }
-  .menu-text-inner {
-    color: $menu_news_color;
+  
+  .media {
+    .menu-bookmark, .menu-tail {
+      background-color: $menu_media_color;
+    }
+    .menu-text-inner {
+      color: $menu_media_color;
+    }
+  }
+  
+  .links {
+    .menu-bookmark, .menu-tail {
+      background-color: $menu_links_color;
+    }
+    .menu-text-inner {
+      color: $menu_links_color;
+    }
+  }
+  
+  .portfolio {
+    .menu-bookmark, .menu-tail {
+      background-color: $menu_portfolio_color;
+    }
+    .menu-text-inner {
+      color: $menu_portfolio_color;
+    }
+  }
+  
+  .contacts {
+    .menu-bookmark, .menu-tail {
+      background-color: $menu_contacts_color;
+    }
+    .menu-text-inner {
+      color: $menu_contacts_color;
+    }
   }
 }
-
-.media {
-  .menu-bookmark, .menu-tail {
-    background-color: $menu_media_color;
-  }
-  .menu-text-inner {
-    color: $menu_media_color;
-  }
-}
-
-.links {
-  .menu-bookmark, .menu-tail {
-    background-color: $menu_links_color;
-  }
-  .menu-text-inner {
-    color: $menu_links_color;
-  }
-}
-
-.portfolio {
-  .menu-bookmark, .menu-tail {
-    background-color: $menu_portfolio_color;
-  }
-  .menu-text-inner {
-    color: $menu_portfolio_color;
-  }
-}
-
-.contacts {
-  .menu-bookmark, .menu-tail {
-    background-color: $menu_contacts_color;
-  }
-  .menu-text-inner {
-    color: $menu_contacts_color;
-  }
-}
-

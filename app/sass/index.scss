@@ -1,5 +1,6 @@
 @import 'all';
 @import 'menu';
+@import 'square_icons';
 
 $menu_top: 30px;
 $title_top: $menu_top;
@@ -20,7 +21,6 @@ $pic_width2: 300;
 $pic_center1: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
 $pic_margin_left1: -$pic_width1 * 1px / 2;
 
-$content_icon_size: 8px;
 $content_v_spaces: 5px;
 $content_title_size: 18px;
 $content_left_side: $menu_item_w + $menu_mid_space;
@@ -65,7 +65,7 @@ $min_width4: $content_width / $left_col_width;
   }
   
   .content {
-    margin: 0-$content_icon_size 0 $footer_bottom_margin 0-$content_width/2;
+    margin: 0-$square_icon_size 0 $footer_bottom_margin 0-$content_width/2;
     width: $content_width;
   }
 }
@@ -86,37 +86,19 @@ $min_width4: $content_width / $left_col_width;
     
 .news-item-box {
   width: $content_width;
-    
+  
   .icons {
     float: left;
-    height: $content_icon_size;
     width: $menu_item_w;
     
-    .icon {
-      float: right;
-      width: $content_icon_size;
-      height: $content_icon_size;
-      margin-left: $content_icon_size;
-    }
-    .ico-news {
-      background-color: $menu_news_color;
-    }
-    .ico-media {
-      background-color: $menu_media_color;
-    }
-    .ico-portfolio {
-      background-color: $menu_portfolio_color;
-    }
-    .ico-contacts {
-      background-color: $menu_contacts_color;
-    }
+    .squares-box { float: right; }
   }
   
   .category {
     float: left;
     margin-left: $menu_mid_space;
     width: $content_text_width;
-    line-height: $content_icon_size;
+    line-height: $square_icon_size;
     font-size: 8pt;
   }
   .date {

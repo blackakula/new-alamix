@@ -1,0 +1,28 @@
+$square_icon_size: 8px;
+
+.squares-box {
+  width: 5 * $square_icon_size;
+  .ico {
+    width: $square_icon_size;
+    height: $square_icon_size;
+    float:left;
+  }
+  .middle {
+    margin: 0 $square_icon_size;
+  }
+  .news {
+    background-color: $menu_news_color;
+  }
+  .media {
+    background-color: $menu_media_color;
+  }
+  .links {
+    background-color: $menu_links_color;
+  }
+  .portfolio {
+    background-color: $menu_portfolio_color;
+  }
+  .contacts {
+    background-color: $menu_contacts_color;
+  }
+}
