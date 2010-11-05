@@ -175,7 +175,7 @@ $min_width4: $content_width / $left_col_width;
     
     .pic-box-inner {
       height: $pic_height;
-      width: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
+      width: 0;
       float: left;
       .pic {
         background-color: $menu_portfolio_color;
@@ -185,12 +185,12 @@ $min_width4: $content_width / $left_col_width;
       }
     }
     .pic-right {
-      left: ($pic_width1 / 2 + $pic_width2 / 2) * 100% / ($pic_width1 + $pic_width2);
+      left: $pic_width1 * 100% / ($pic_width1 + $pic_width2);
       width: $pic_width2 * 50% / ($pic_width1 + $pic_width2);
       .pic {
         background-color: $menu_media_color;
         width: $pic_width2 * 1px;
-        margin-left: -$pic_width2 * 1px / 2;
+        margin-left: 0;
       }
     }
   }
