@@ -8,8 +8,7 @@
           - $news_item_style = $item['style']
           .news-item-box.$news_item_style
             .icons
-              - $this->set('squares-colors', $item['icons'])
-              - $this->_include('square_icons')
+              - $this->_includeSquares($item['icons'])
             .category= $item['category']
             .clear
             .date= $item['date']

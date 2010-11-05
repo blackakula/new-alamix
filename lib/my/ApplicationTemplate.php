@@ -37,5 +37,10 @@
           array('контакти', 'contacts', true)
       ));
     }
+    
+    public function _includeSquares($colors) {
+    	$this->set('squares-colors', $colors);
+    	$this->_include('square_icons');
+    }
   }
 ?>
