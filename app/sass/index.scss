@@ -136,19 +136,19 @@ $min_width4: $content_width / $left_col_width;
   background-color: $rigth_bg_color;
   width: ($main_width - $left_col_width)*100%;
   
-  .title-text-box, .pic-box-inner, .copyright-box {
-    position: relative;
-    left: $pic_center1;
+  .title-text-box, .copyright-box {
+    margin: 0 ($pic_width1 + $pic_width2) * 1px 0 0;
   }
   .title-text-box h1.title, .pic-box-inner .pic, .copyright-box span {
-    margin-left: $pic_margin_left1;
+    position: relative;
+    left: (100 / 3) * 1%;
   }
   
   .title-text-box {
     height: $title_box_height;
     
     h1.title {
-      margin: 0 0 0 $pic_margin_left1;
+      margin: 0;
       color: $title_color;
       position: relative;
       top: $title_top;
@@ -165,6 +165,7 @@ $min_width4: $content_width / $left_col_width;
   
     a, span {
       color: $copyright_color;
+      white-space: nowrap;
     }
   }
   
@@ -182,6 +183,7 @@ $min_width4: $content_width / $left_col_width;
         height: $pic_height;
         width: $pic_width1 * 1px;
         margin-left: 0;
+        left: 100%;
       }
     }
     .pic-right {
