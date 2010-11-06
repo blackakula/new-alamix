@@ -1,6 +1,7 @@
 @import 'all';
 @import 'menu';
 @import 'square_icons';
+@import 'layout';
 
 $menu_top: 30px;
 $title_top: $menu_top;
@@ -39,14 +40,7 @@ $min_width4: $content_width / $left_col_width;
 }
 
 .abc-index {
-  overflow: hidden;
-  width: 100%;
   @include set-min-width('min-width'); 
-}
-.abc-left, .abc-right {
-  float: left;
-  margin-bottom: -$very_large_outside;
-  padding-bottom: $very_large_outside;
 }
 
 .content-box, .menu-box {
@@ -58,14 +52,12 @@ $min_width4: $content_width / $left_col_width;
 }
 
 .abc-left {
-  width: $left_col_width*100%;
-  
   .menu-box {
     height: $menu_box_height;
   }
   
   .content {
-    margin: 0-$square_icon_size 0 $footer_bottom_margin 0-$content_width/2;
+    margin: 0-$square_icon_size 0 0 0-$content_width/2;
     width: $content_width;
   }
 }
@@ -133,9 +125,6 @@ $min_width4: $content_width / $left_col_width;
 }
 
 .abc-right {
-  background-color: $rigth_bg_color;
-  width: ($main_width - $left_col_width)*100%;
-  
   .title-text-box, .copyright-box {
     margin: 0 ($pic_width1 + $pic_width2) * 1px 0 0;
   }
@@ -171,7 +160,7 @@ $min_width4: $content_width / $left_col_width;
   
   .pic-box {
     height: $pic_height;
-    margin: $pic_box_up_margin ($pic_width1 + $pic_width2) * 1px $footer_bottom_margin 0;
+    margin: $pic_box_up_margin ($pic_width1 + $pic_width2) * 1px 0 0;
     
     .pic-box-inner {
       height: $pic_height;

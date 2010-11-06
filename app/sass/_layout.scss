@@ -1,0 +1,19 @@
+.abc-index {
+  overflow: hidden;
+  width: 100%;
+}
+
+.abc-left, .abc-right {
+  float: left;
+  margin-bottom: -$very_large_outside + $footer_bottom_margin;
+  padding-bottom: $very_large_outside;
+}
+
+.abc-left {
+  width: $left_col_width*100%;
+}
+
+.abc-right {
+  background-color: $rigth_bg_color;
+  width: ($main_width - $left_col_width)*100%;
+}
