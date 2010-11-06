@@ -5,5 +5,5 @@
       .item-mid
     - $this->set('menu_item_class', $menu_item[1]);
     .item.$menu_item_class
-      - $this->set('menu_item_text', $menu_item[0])
+      - $this->set('menu_one_item', $menu_item)
       - $this->_include('menu_item'.($menu_item[2] ? '1' : '2'))

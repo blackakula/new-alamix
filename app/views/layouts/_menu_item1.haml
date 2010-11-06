@@ -1,7 +1,8 @@
-%a{href="#"}
+- $menu_item = $this->get('menu_one_item')
+%a{href="<?php echo htmlspecialchars($menu_item[3])?>"}
   %span.menu-bookmark &nbsp;
   %span.menu-text &nbsp;
     %span.menu-text-inner
-      -= $this->get('menu_item_text')
+      -= $menu_item[0]
   %span.menu-tail &nbsp;
 .menu-space

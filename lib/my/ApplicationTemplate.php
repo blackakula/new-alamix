@@ -29,12 +29,13 @@
     }
 
     public function setMenu() {
+    	$r = get_routes();
       $this->set('menu', array(
-          array('новини', 'news', true),
-          array('медіа', 'media', false),
-          array('лінки', 'links', true),
-          array('портфоліо', 'portfolio', false),
-          array('контакти', 'contacts', true)
+          array('новини', 'news', true, '#'),
+          array('медіа', 'media', false, '#'),
+          array('лінки', 'links', true, $r->build_path('links')),
+          array('портфоліо', 'portfolio', false, '#'),
+          array('контакти', 'contacts', true, '#')
       ));
     }
     
