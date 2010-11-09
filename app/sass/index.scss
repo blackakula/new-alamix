@@ -3,21 +3,20 @@
 @import 'square_icons';
 @import 'layout';
 
-$menu_top: 30px;
 $title_top: $menu_top;
-$menu_box_height: $menu_top + $menu_height;
 $title_box_height: $title_top + $title_text_height;
 
 $pic_box_up_margin: 90px;
-$content_up_margin: 100px;
 
-$title_text_width: 460px;
 $content_width: $menu_width;
 $content_height: 56px;
 
 $pic_height: 440px;
 $pic_width1: 200;
 $pic_width2: 300;
+$min_img_spaces: 10;
+
+$title_text_width: ($pic_width1 + $pic_width2 + $min_img_spaces) * 1px;
 
 $pic_center1: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
 $pic_margin_left1: -$pic_width1 * 1px / 2;
@@ -29,7 +28,7 @@ $content_text_width: $menu_width - $content_left_side;
 
 $min_width1: $menu_width / $left_col_width;
 $min_width2: $title_text_width / $right_col_width;
-$min_width3: ($pic_width1 + $pic_width2 + 4 * 10) * 1px / $right_col_width;
+$min_width3: ($pic_width1 + $pic_width2 + 3 * $min_img_spaces) * 1px / $right_col_width;
 $min_width4: $content_width / $left_col_width;
 
 @mixin set-min-width($parameter) {
@@ -41,14 +40,6 @@ $min_width4: $content_width / $left_col_width;
 
 .abc-index {
   @include set-min-width('min-width'); 
-}
-
-.content-box, .menu-box {
-  position: relative;
-  width: 50%;
-  left: 50%;
-  padding-left: $very_large_outside;
-  margin-left: -$very_large_outside;
 }
 
 .abc-left {
@@ -116,12 +107,6 @@ $min_width4: $content_width / $left_col_width;
     text-align: justify;
     height: $content_height;
   }
-}
-
-.menu {
-  position: relative;
-  top: $menu_top;
-  margin-left: -$menu_width / 2;
 }
 
 .abc-right {

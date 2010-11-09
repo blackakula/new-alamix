@@ -1,3 +1,8 @@
+$menu_top: 30px;
+$menu_box_height: $menu_top + $menu_height;
+
+$content_up_margin: 100px;
+
 .abc-index {
   overflow: hidden;
   width: 100%;
@@ -16,4 +21,18 @@
 .abc-right {
   background-color: $rigth_bg_color;
   width: ($main_width - $left_col_width)*100%;
+}
+
+.content-box, .menu-box {
+  position: relative;
+  width: 50%;
+  left: 50%;
+  padding-left: $very_large_outside;
+  margin-left: -$very_large_outside;
+}
+
+.menu {
+  position: relative;
+  top: $menu_top;
+  margin-left: -$menu_width / 2;
 }
