@@ -39,7 +39,8 @@
       ));
     }
     
-    public function _includeSquares($colors) {
+    public function _includeSquares($colors = null) {
+    	if (empty($colors)) $colors = array('media','portfolio','contacts');
     	$this->set('squares-colors', $colors);
     	$this->_include('square_icons');
     }

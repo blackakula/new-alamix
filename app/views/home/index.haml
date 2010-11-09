@@ -4,8 +4,7 @@
       - $this->_include('menu')
     .content-box
       .content
-        - foreach ($this->get('content_items') as $item)
-          - $news_item_style = $item['style']
+        - foreach ($this->get('content_items') as $news_item_style => $item)
           .news-item-box.$news_item_style
             .icons
               - $this->_includeSquares($item['icons'])
@@ -16,7 +15,7 @@
             .text= $item['text']
   .abc-right
     .title-text-box
-      %h1.title Ви на веб-сторінці AlaMix
+      %h1.title= $this->get('h1_title')
     .copyright-box
       %span
         &copy; 
