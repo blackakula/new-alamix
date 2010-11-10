@@ -53,11 +53,6 @@ $min_width3: (3 * $links_right_column_width + $links_right_total * $min_column_s
 }
 
 .column {
-  .icons-box {
-    @include center-block;
-    .squares-box { margin-left: -$squares_width / 2; }
-  }
-  
   .space {
     width: 100%;
     height: 46px;
@@ -67,7 +62,7 @@ $min_width3: (3 * $links_right_column_width + $links_right_total * $min_column_s
     color: $content_titles_color;
     font-size: $content_title_font_size;
     line-height: $content_title_size;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
   }
   
