@@ -10,6 +10,10 @@ $content_title_font_size: 16pt;
 $content_text_color: #FFFFFF;
 $content_text_font_size: 9pt;
 
+$title_top: $menu_top;
+$title_box_height: $title_top + $title_text_height;
+$space_after_title: 90px;
+
 $min_width_menu: $menu_width / $left_col_width;
 
 .abc-index {
@@ -37,6 +41,28 @@ $min_width_menu: $menu_width / $left_col_width;
 .abc-right {
   background-color: $rigth_bg_color;
   width: ($main_width - $left_col_width)*100%;
+  
+  .title-text-box {
+    height: $title_box_height;
+    
+    h1.title {
+      margin: 0;
+      color: $title_color;
+      position: relative;
+      top: $title_top;
+      font-size: 30pt;
+    }
+  }
+    
+  .copyright-box {
+    color: $copyright_color;
+    font-size: 10pt;
+  
+    a, span {
+      color: $copyright_color;
+      white-space: nowrap;
+    }
+  }
 }
 
 @mixin center-block {

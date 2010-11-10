@@ -11,4 +11,15 @@
           - $this->_includeColumn(1)
       .clear
   .abc-right
-    right
+    - $this->_include('title')
+    .right-content
+      .right-sp.sp1
+        .right-column.column
+          - $this->_includeColumn(2)
+      .right-sp.sp2
+        .right-column.column
+          - $this->_includeColumn(3)
+      .right-sp.sp3
+        .right-column.column
+          - $this->_includeColumn(4)
+      .clear
