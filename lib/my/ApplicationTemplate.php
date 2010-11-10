@@ -29,14 +29,23 @@
     }
 
     public function setMenu() {
-    	$r = get_routes();
-      $this->set('menu', array(
+      $r = get_routes();
+      $menu = array(
           array('новини', 'news', true, '#'),
           array('медіа', 'media', false, '#'),
           array('лінки', 'links', true, $r->build_path('links')),
           array('портфоліо', 'portfolio', false, '#'),
           array('контакти', 'contacts', true, '#')
-      ));
+      );
+      if ($this->get('menu-replace')) {
+      	$replace = $this->get('menu-replace');
+        foreach ($menu as $k => $item)
+      	  if ($item[1] == $replace) {
+      	    $menu[$k][0] = 'головна';
+      	    $menu[$k][3] = $r->build_path('root');
+          }
+      }
+      $this->set('menu', $menu);
     }
     
     public function _includeSquares($colors = null) {

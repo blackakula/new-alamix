@@ -13,7 +13,7 @@ $pic_width1: 200;
 $pic_width2: 300;
 $min_img_spaces: 10;
 
-$title_text_width: ($pic_width1 + $pic_width2 + $min_img_spaces) * 1px;
+$title_text_width: ($pic_width1 + $pic_width2 + 2 * $min_img_spaces) * 1px;
 
 $pic_center1: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
 $pic_margin_left1: -$pic_width1 * 1px / 2;
@@ -22,15 +22,13 @@ $content_v_spaces: 5px;
 $content_left_side: $menu_item_w + $menu_mid_space;
 $content_text_width: $menu_width - $content_left_side;
 
-$min_width2: $title_text_width / $right_col_width;
-$min_width3: ($pic_width1 + $pic_width2 + 3 * $min_img_spaces) * 1px / $right_col_width;
-$min_width4: $content_width / $left_col_width;
+$min_width2: ($pic_width1 + $pic_width2 + 3 * $min_img_spaces) * 1px / $right_col_width;
+$min_width3: $content_width / $left_col_width;
 
 @mixin set-min-width($parameter) {
-  @if ($min_width_menu > $min_width2) and ($min_width_menu > $min_width3) and ($min_width_menu > $min_width4) { #{$parameter}: $min_width_menu; }
-  @else if ($min_width2 > $min_width3) and ($min_width2 > $min_width4) { #{$parameter}: $min_width2; }
-  @else if ($min_width3 > $min_width4) { #{$parameter}: $min_width3; }
-  @else { #{$parameter}: $min_width4; }
+  @if ($min_width_menu > $min_width2) and ($min_width_menu > $min_width3) { #{$parameter}: $min_width_menu; }
+  @else if ($min_width2 > $min_width3) { #{$parameter}: $min_width2; }
+  @else { #{$parameter}: $min_width3; }
 }
 
 .abc-index {

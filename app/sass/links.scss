@@ -17,13 +17,15 @@ $links_right_sp3: 1;
 $links_right_sp4: 2;
 $links_right_total: $links_right_sp1 + $links_right_sp2 + $links_right_sp3 + $links_right_sp4;
 
-$title_text_width: 3 * $links_right_column_width + ($links_right_sp2 + $links_right_sp3) * $min_column_spaces;
+$title_text_width: 3 * $links_right_column_width + ($links_right_sp2 + $links_right_sp3 + $links_right_sp4) * $min_column_spaces;
 
 $min_width2: (2 * $links_left_column_width + ($links_left_sp1 + $links_left_sp2 + $links_left_sp3) * $min_column_spaces) / $left_col_width;
+$min_width3: (3 * $links_right_column_width + $links_right_total * $min_column_spaces) / $right_col_width;
 
 @mixin set-min-width($parameter) {
-  @if ($min_width_menu > $min_width2) { #{$parameter}: $min_width_menu; }
-  @else { #{$parameter}: $min_width2; }
+  @if ($min_width_menu > $min_width2) and ($min_width_menu > $min_width3) { #{$parameter}: $min_width_menu; }
+  @else if ($min_width2 > $min_width3) { #{$parameter}: $min_width2; }
+  @else { #{$parameter}: $min_width3; }
 }
 
 .abc-index {
