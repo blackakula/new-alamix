@@ -1,0 +1,10 @@
+- foreach ($this->get('column-item') as $item)
+  - if ($item[0] == 'icons')
+    .icons-box
+      - $this->_includeSquares($item[1])
+  - if ($item[0] == 'title')
+    .title= $item[1]
+  - if ($item[0] == 'text')
+    .text= $item[1]
+  - if ($item[0] == 'space')
+    .space

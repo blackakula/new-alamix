@@ -1,7 +1,8 @@
 $square_icon_size: 8px;
+$squares_width: 5 * $square_icon_size;
 
 .squares-box {
-  width: 5 * $square_icon_size;
+  width: $squares_width;
   .ico {
     width: $square_icon_size;
     height: $square_icon_size;

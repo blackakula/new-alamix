@@ -3,6 +3,15 @@ $menu_box_height: $menu_top + $menu_height;
 
 $content_up_margin: 100px;
 
+$content_titles_color: #DDCAB9;
+$content_title_size: 18px;
+$content_title_font_size: 16pt;
+
+$content_text_color: #FFFFFF;
+$content_text_font_size: 9pt;
+
+$min_width_menu: $menu_width / $left_col_width;
+
 .abc-index {
   overflow: hidden;
   width: 100%;
@@ -16,6 +25,13 @@ $content_up_margin: 100px;
 
 .abc-left {
   width: $left_col_width*100%;
+
+  .menu-box {
+    height: $menu_box_height;
+  }
+  .content-box {
+    margin-top: $content_up_margin;
+  }
 }
 
 .abc-right {
@@ -23,7 +39,7 @@ $content_up_margin: 100px;
   width: ($main_width - $left_col_width)*100%;
 }
 
-.content-box, .menu-box {
+@mixin center-block {
   position: relative;
   width: 50%;
   left: 50%;

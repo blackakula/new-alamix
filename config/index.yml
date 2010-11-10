@@ -5,16 +5,25 @@ content:
     category: новини
     date: 30/X
     title: Заголовок першої новини
-    text: Текст першої новини. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis venenatis sollicitudin.
+    text: >
+      Текст першої новини.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Fusce sagittis venenatis sollicitudin.
   media:
+    icons: [news, contacts, portfolio]
     category: медіа
     date: 1/XI
     title: Заголовок другої новини
-    text: Текст другої новини. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis venenatis sollicitudin.
-    icons: [news, contacts, portfolio]
+    text: >
+      Текст другої новини.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Fusce sagittis venenatis sollicitudin.
   portfolio:
+    icons: [contacts, media, news]
     category: портфоліо
     date: 1/XI
     title: Заголовок третьої новини
-    text: Текст третьої новини. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis venenatis sollicitudin.
-    icons: [contacts, media, news]
+    text: >
+      Текст третьої новини.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Fusce sagittis venenatis sollicitudin.

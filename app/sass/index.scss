@@ -22,17 +22,15 @@ $pic_center1: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
 $pic_margin_left1: -$pic_width1 * 1px / 2;
 
 $content_v_spaces: 5px;
-$content_title_size: 18px;
 $content_left_side: $menu_item_w + $menu_mid_space;
 $content_text_width: $menu_width - $content_left_side;
 
-$min_width1: $menu_width / $left_col_width;
 $min_width2: $title_text_width / $right_col_width;
 $min_width3: ($pic_width1 + $pic_width2 + 3 * $min_img_spaces) * 1px / $right_col_width;
 $min_width4: $content_width / $left_col_width;
 
 @mixin set-min-width($parameter) {
-  @if ($min_width1 > $min_width2) and ($min_width1 > $min_width3) and ($min_width1 > $min_width4) { #{$parameter}: $min_width1; }
+  @if ($min_width_menu > $min_width2) and ($min_width_menu > $min_width3) and ($min_width_menu > $min_width4) { #{$parameter}: $min_width_menu; }
   @else if ($min_width2 > $min_width3) and ($min_width2 > $min_width4) { #{$parameter}: $min_width2; }
   @else if ($min_width3 > $min_width4) { #{$parameter}: $min_width3; }
   @else { #{$parameter}: $min_width4; }
@@ -43,18 +41,14 @@ $min_width4: $content_width / $left_col_width;
 }
 
 .abc-left {
-  .menu-box {
-    height: $menu_box_height;
-  }
-  
   .content {
     margin: 0-$square_icon_size 0 0 0-$content_width/2;
     width: $content_width;
   }
 }
 
-.content-box {
-  margin-top: $content_up_margin;
+.content-box, .menu-box {
+  @include center-block;
 }
 
 .news-item-box.news .category {
@@ -94,7 +88,7 @@ $min_width4: $content_width / $left_col_width;
     margin-left: $content_left_side;
   }
   .date, .title {
-    font-size: 16pt;
+    font-size: $content_title_font_size;
     line-height: $content_title_size;
     color: $content_titles_color;
   }
@@ -102,8 +96,8 @@ $min_width4: $content_width / $left_col_width;
   .text {
     width: $content_text_width - $menu_item_w / 2;
     margin: $content_v_spaces 0 10px $content_left_side;
-    color: #FFFFFF;
-    font-size: 9pt;
+    color: $content_text_color;
+    font-size: $content_text_font_size;
     text-align: justify;
     height: $content_height;
   }

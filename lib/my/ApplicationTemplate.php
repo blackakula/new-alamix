@@ -44,5 +44,11 @@
     	$this->set('squares-colors', $colors);
     	$this->_include('square_icons');
     }
+    
+    public function _includeColumn($number) {
+    	$columns = $this->get('COLUMNS');
+    	$this->set('column-item', $columns[$number]);
+    	$this->_include('column');
+    }
   }
 ?>

@@ -2,5 +2,13 @@
   .abc-left
     .menu-box
       - $this->_include('menu')
+    .content-box
+      .left-sp.sp1
+        .left-column.column
+          - $this->_includeColumn(0)
+      .left-sp.sp2
+        .left-column.column
+          - $this->_includeColumn(1)
+      .clear
   .abc-right
     right

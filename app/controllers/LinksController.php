@@ -1,19 +1,41 @@
 <?php
   class LinksController extends ApplicationController {
+  	const DELIMITER = '<--->';
+  	
     public function index() {
-      $this->set('title','This is links page');
       $this->set('stylesheets', array('links.css'));
       
-      $this->set('LINKS', array(
-      	array(
-      		'title' => 'Для дизайну',
-      		'text' => 'Текст для дизайну. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi libero. Cras non nisl eget ligula commodo ullamcorper vitae ac ante. Vestibulum ut ipsum lorem, nec euismod ante. Vestibulum gravida tempus lorem hendrerit rhoncus. Cras ac lectus sed erat bibendum feugiat ut et metus. Maecenas quis tortor nunc, id dapibus est. Sed a sapien nec turpis suscipit interdum sed at sapien. Nam dictum, arcu vitae scelerisque facilisis, neque erat porta felis, a hendrerit ante nulla et libero. Aliquam quis lorem vitae leo malesuada fringilla.'
-      	),
-      	array(
-      		'title' => 'Креативні ідеї',
-      		'text' => 'Ідеї, ідеї, ідеї. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi libero. Cras non nisl eget ligula commodo ullamcorper vitae ac ante. Vestibulum ut ipsum lorem, nec euismod ante. Vestibulum gravida tempus lorem hendrerit rhoncus. Cras ac lectus sed erat bibendum feugiat ut et metus. Maecenas quis tortor nunc, id dapibus est. Sed a sapien nec turpis suscipit interdum sed at sapien. Nam dictum, arcu vitae scelerisque facilisis, neque erat porta felis, a hendrerit ante nulla et libero. Aliquam quis lorem vitae leo malesuada fringilla.'
-      	)
-      ));
+      $data = get_config('links');
+    	$this->set('title',$data['title']);
+    	$this->set('h1_title', $data['h1']);
+    	
+    	$columns = array();
+    	$column_index = 0;
+    	foreach ($data['content'] as $item) {
+    		$this->_newColumn($column_index, $columns);
+    		
+    		$column_item = &$columns[$column_index];
+    		if (count($column_item) > 0) $column_item[] = array('space');
+    		$column_item[] = array('icons', $item['icons']);
+    		$column_item[] = array('title', $item['title']);
+    		
+    		foreach (explode(self::DELIMITER, $item['text']) as $part) {
+    			$part = trim($part);
+    			if (!empty($part)) {
+    				$this->_newColumn($column_index, $columns);
+    				$columns[$column_index][] = array('text', $part);
+    			}
+    			++$column_index;
+    		}
+    		--$column_index;
+    	}
+    	
+    	$this->set('COLUMNS', $columns);
+    }
+    
+    private function _newColumn($column_index, &$columns) {
+    	if (!array_key_exists($column_index, $columns))
+    		$columns[$column_index] = array();
     }
   }
 ?>
