@@ -105,9 +105,10 @@ $min_width3: $content_width / $left_col_width;
   .title-text-box, .copyright-box {
     margin: 0 ($pic_width1 + $pic_width2) * 1px 0 0;
   }
-  .title-text-box h1.title, .pic-box-inner .pic, .copyright-box div {
+  
+  .title-text-box .space, .pic-box .pic-box-inner, .copyright-box .space {
     position: relative;
-    left: (100 / 3) * 1%;
+    width: (100 / 3) * 1%;
   }
   
   h1.title { width: $title_text_width; }
@@ -118,7 +119,6 @@ $min_width3: $content_width / $left_col_width;
     
     .pic-box-inner {
       height: $pic_height;
-      width: (100 / 3) * 1%;
       float: left;
       left: (100 / 3) * 1%;
       .pic {

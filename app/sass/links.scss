@@ -81,9 +81,10 @@ $min_width3: (3 * $links_right_column_width + $links_right_total * $min_column_s
   .title-text-box, .copyright-box {
     margin: 0  $links_right_column_width * 3 0 0;
   }
-  .title-text-box h1.title, .pic-box-inner .pic, .copyright-box div {
+  
+  .title-text-box .space, .copyright-box .space {
     position: relative;
-    left: $links_right_sp1 * 100% / $links_right_total;
+    width: $links_right_sp1 * 100% / $links_right_total;
   }
   
   h1.title { width: $title_text_width; }

@@ -42,6 +42,11 @@ $min_width_menu: $menu_width / $left_col_width;
   background-color: $rigth_bg_color;
   width: ($main_width - $left_col_width)*100%;
   
+  .copyright-box .box, .title-text-box h1.title {
+    position: relative;
+    left: 100%;
+  }
+  
   .title-text-box {
     height: $title_box_height;
     
