@@ -76,21 +76,24 @@ $min_width3: $content_width / $left_col_width;
   .date {
     width: $menu_item_w;
     text-align: right;
-    margin-top: $content_v_spaces;
+    float: left;
   }
   .title {
-    margin-top: -$content_title_size;
     margin-left: $content_left_side;
   }
   .date, .title {
+    position: relative;
+    top: $content_v_spaces;
     font-size: $content_title_font_size;
     line-height: $content_title_size;
     color: $content_titles_color;
   }
   
   .text {
+    position: relative;
+    top: 2 * $content_v_spaces;
     width: $content_text_width - $menu_item_w / 2;
-    margin: $content_v_spaces 0 10px $content_left_side;
+    margin: 0 0 10px $content_left_side;
     color: $content_text_color;
     font-size: $content_text_font_size;
     text-align: justify;
