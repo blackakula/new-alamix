@@ -19,3 +19,8 @@
           .clear
   .abc-right
     - $this->_include('title')
+    .right-content
+      .gallery-box
+        .spacegallery#gallery
+          - foreach ($this->get('gallery_photos') as $photo)
+            -= $this->_img($photo)

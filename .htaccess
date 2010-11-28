@@ -4,7 +4,7 @@ Options +FollowSymLinks -Indexes
   RewriteEngine On
   RewriteBase /
 
-  RewriteCond %{REQUEST_URI} ^/(css|img)/.
+  RewriteCond %{REQUEST_URI} ^/(css|img|js)/.
   RewriteRule ^(.*)$ public/$1 [L]
 
   RewriteCond %{ENV:REDIRECT_STATUS} ^$
@@ -16,6 +16,6 @@ Options +FollowSymLinks -Indexes
   RewriteRule ^(.*)$ public/index.php [L,QSA]
 
   RewriteCond %{REQUEST_URI} !^/public/index\.php(\?path=)?
-  RewriteCond %{REQUEST_URI} !^/public/(css|img)/.
+  RewriteCond %{REQUEST_URI} !^/public/(css|img|js)/.
   RewriteRule ^(.*)$ public/index.php [L,QSA]
 </IfModule>

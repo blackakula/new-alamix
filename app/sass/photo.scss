@@ -60,4 +60,31 @@ $content_img_space_left: 10px;
   }
 
   h1.title { width: $title_text_width; }
+
+  .right-content {
+    margin: $space_after_title ($pic_width1 + $pic_width2) * 1px 0 0;
+  }
+}
+
+.gallery-box {
+  margin-left: $pic_margin_left;
+  #gallery {
+    position: relative;
+    left: 0;
+    width: $title_text_width;
+    height: 500px;
+
+    img {
+      left: 50%;
+      position: absolute;
+    }
+
+    a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
