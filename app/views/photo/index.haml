@@ -24,3 +24,5 @@
         .spacegallery#gallery
           - foreach ($this->get('gallery_photos') as $photo)
             -= $this->_img($photo)
+- foreach ($this->get('photo_javascripts') as $javascript)
+  -= $this->_js($javascript)

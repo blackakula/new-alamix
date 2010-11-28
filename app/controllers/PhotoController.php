@@ -2,7 +2,7 @@
   class PhotoController extends ApplicationController {
     public function index() {
       $this->set('stylesheets', array('photo.css'));
-      $this->set('javascripts', array(
+      $this->set('photo_javascripts', array(
             'jquery-1.4.4.min.js',
             'gallery/eye.js',
             'gallery/utils.js',
