@@ -11,7 +11,7 @@ $menu_width: $items_count * $menu_item_w + ($items_count - 1) * $menu_mid_space;
 $menu_news_color: #76C5F0;
 $menu_media_color: #85C226;
 $menu_links_color: #C07073;
-$menu_portfolio_color: #DC214C;
+$menu_photo_color: #DC214C;
 $menu_contacts_color: #E77843;
 
 $menu_font: Arial;
@@ -90,12 +90,12 @@ $menu_font: Arial;
     }
   }
   
-  .portfolio {
+  .photo {
     .menu-bookmark, .menu-tail {
-      background-color: $menu_portfolio_color;
+      background-color: $menu_photo_color;
     }
     .menu-text-inner {
-      color: $menu_portfolio_color;
+      color: $menu_photo_color;
     }
   }
   

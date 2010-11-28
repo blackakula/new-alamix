@@ -34,8 +34,8 @@
           array('новини', 'news', true, '#'),
           array('медіа', 'media', false, '#'),
           array('лінки', 'links', true, $r->build_path('links')),
-          array('портфоліо', 'portfolio', false, '#'),
-          array('контакти', 'contacts', true, '#')
+          array('фото', 'photo', false, '#'),
+          array('аля про', 'contacts', true, '#')
       );
       if ($this->get('menu-replace')) {
       	$replace = $this->get('menu-replace');
@@ -49,7 +49,7 @@
     }
     
     public function _includeSquares($colors = null) {
-    	if (empty($colors)) $colors = array('media','portfolio','contacts');
+    	if (empty($colors)) $colors = array('media','photo','contacts');
     	$this->set('squares-colors', $colors);
     	$this->_include('square_icons');
     }

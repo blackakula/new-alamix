@@ -10,7 +10,7 @@ content:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Fusce sagittis venenatis sollicitudin.
   media:
-    icons: [news, contacts, portfolio]
+    icons: [news, contacts, photo]
     category: медіа
     date: 1/XI
     title: Заголовок другої новини
@@ -18,7 +18,7 @@ content:
       Текст другої новини.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Fusce sagittis venenatis sollicitudin.
-  portfolio:
+  photo:
     icons: [contacts, media, news]
     category: портфоліо
     date: 1/XI
