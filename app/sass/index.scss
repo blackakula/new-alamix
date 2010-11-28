@@ -9,11 +9,6 @@ $content_width: $menu_width;
 $content_height: 56px;
 
 $pic_height: 440px;
-$pic_width1: 200;
-$pic_width2: 300;
-$min_img_spaces: 10;
-
-$title_text_width: ($pic_width1 + $pic_width2 + 2 * $min_img_spaces) * 1px;
 
 $pic_center1: $pic_width1 * 100% / ($pic_width1 + $pic_width2) / 2;
 $pic_margin_left1: -$pic_width1 * 1px / 2;
@@ -108,7 +103,7 @@ $min_width3: $content_width / $left_col_width;
   
   .title-text-box .space, .pic-box .pic-box-inner, .copyright-box .space {
     position: relative;
-    width: (100 / 3) * 1%;
+    width: $pic_margin_left;
   }
   
   h1.title { width: $title_text_width; }
@@ -120,7 +115,7 @@ $min_width3: $content_width / $left_col_width;
     .pic-box-inner {
       height: $pic_height;
       float: left;
-      left: (100 / 3) * 1%;
+      left: $pic_margin_left;
       .pic {
         background-color: $menu_photo_color;
         height: $pic_height;
@@ -130,7 +125,7 @@ $min_width3: $content_width / $left_col_width;
       }
     }
     .pic-right {
-      left: (100 / 3) * 1%;
+      left: $pic_margin_left;
       .pic {
         background-color: $menu_media_color;
         width: $pic_width2 * 1px;

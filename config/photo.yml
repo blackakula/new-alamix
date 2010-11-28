@@ -1,0 +1,21 @@
+title: This is photo page
+h1: Веб-Світ Аля Мікс
+content:
+  - img: xxx.jpg
+    title: Настя в осені 2008го
+    model: Настенько
+    place: Ярославів Вал
+    date: осінь 2008
+    text: >
+      ipsum dolor sit amet, consectetur adipiscing elit.
+      Vestibulum gravida tempus lorem hendrerit rhoncus.
+      Cras ac lectus.
+  - img: xxx.jpg
+    title: Джунта
+    model: Джунта Кі
+    place: Героїв Дніпра
+    date: осінь 2010
+    text: >
+      et, consectetur adipiscing elit.
+      Vestibulum gravida tet, consectetur adipiscing elit.
+      Vests non nisl.

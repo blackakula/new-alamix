@@ -1,0 +1,21 @@
+.abc-index
+  .abc-left
+    .menu-box
+      - $this->set('menu-replace', 'photo')
+      - $this->_include('menu')
+    .content-box
+      - foreach ($this->get('content_items') as $item)
+        .item-box
+          .img-item
+            -= $this->_img($item['img'])
+          .info-item
+            %ul
+              %li.title= $item['title']
+              - foreach (array('model' => 'Модель', 'place' => 'Місце', 'date' => 'Дата') as $index => $label)
+                %li.info
+                  -= $label.': '
+                  -= $item[$index]
+              %li.text= $item['text']
+          .clear
+  .abc-right
+    - $this->_include('title')

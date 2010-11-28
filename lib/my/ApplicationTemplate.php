@@ -34,7 +34,7 @@
           array('новини', 'news', true, '#'),
           array('медіа', 'media', false, '#'),
           array('лінки', 'links', true, $r->build_path('links')),
-          array('фото', 'photo', false, '#'),
+          array('фото', 'photo', false, $r->build_path('photo')),
           array('аля про', 'contacts', true, '#')
       );
       if ($this->get('menu-replace')) {

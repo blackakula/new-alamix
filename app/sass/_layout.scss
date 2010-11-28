@@ -16,6 +16,12 @@ $space_after_title: 90px;
 
 $min_width_menu: $menu_width / $left_col_width;
 
+$pic_width1: 200;
+$pic_width2: 300;
+$pic_margin_left: (100 / 3) * 1%;
+$min_img_spaces: 10;
+$title_text_width: ($pic_width1 + $pic_width2 + 2 * $min_img_spaces) * 1px;
+
 .abc-index {
   overflow: hidden;
   width: 100%;

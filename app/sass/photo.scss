@@ -1,0 +1,60 @@
+@import 'all';
+@import 'menu';
+@import 'square_icons';
+@import 'layout';
+
+$content_width: $menu_width;
+$content_space: 50px;
+
+$content_img_width: 100px;
+$content_img_height: 130px;
+$content_h_space: 20px;
+$content_title_space: 5px;
+$content_text_space: 18px;
+
+.menu-box, .content-box {
+  @include center-block;
+}
+
+.item-box {
+  margin-top: $content_space;
+  width: $content_width;
+  margin-left: -$content_width / 2;
+  .img-item, .info-item { float: left; }
+  .img-item {
+    width: $content_img_width;
+    height: $content_img_height;
+    background-color: $menu_links_color;
+  }
+  .info-item {
+    width: $content_width - $content_img_width;
+    ul {
+      margin: 0 0 0 $content_h_space;
+      padding: 0;
+      list-style-type: none;
+    }
+    .title {
+      font-size: $content_title_font_size;
+      color: $content_titles_color;
+      margin-bottom: $content_title_space;
+    }
+    .info, .text {
+      font-size: $content_text_font_size;
+      color: $content_text_color;
+    }
+    .text { margin-top: $content_text_space; }
+  }
+}
+
+.abc-right {
+  .title-text-box, .copyright-box {
+    margin: 0 ($pic_width1 + $pic_width2) * 1px 0 0;
+  }
+
+  .title-text-box .space, .copyright-box .space {
+    position: relative;
+    width: $pic_margin_left;
+  }
+
+  h1.title { width: $title_text_width; }
+}
