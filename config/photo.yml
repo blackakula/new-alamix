@@ -1,7 +1,7 @@
 title: This is photo page
 h1: Веб-Світ Аля Мікс
 content:
-  - img: xxx.jpg
+  - img: example_photo_content1.jpg
     title: Настя в осені 2008го
     model: Настенько
     place: Ярославів Вал
@@ -10,7 +10,7 @@ content:
       ipsum dolor sit amet, consectetur adipiscing elit.
       Vestibulum gravida tempus lorem hendrerit rhoncus.
       Cras ac lectus.
-  - img: xxx.jpg
+  - img: example_photo_content2.jpg
     title: Джунта
     model: Джунта Кі
     place: Героїв Дніпра

@@ -11,6 +11,8 @@ $content_img_height: 130px;
 $content_h_space: 20px;
 $content_title_space: 5px;
 $content_text_space: 18px;
+$content_img_space_top: 10px;
+$content_img_space_left: 10px;
 
 .menu-box, .content-box {
   @include center-block;
@@ -25,6 +27,7 @@ $content_text_space: 18px;
     width: $content_img_width;
     height: $content_img_height;
     background-color: $menu_links_color;
+    img { margin: $content_img_space_top 0 0 $content_img_space_left; }
   }
   .info-item {
     width: $content_width - $content_img_width;
