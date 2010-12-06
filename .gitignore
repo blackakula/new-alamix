@@ -5,3 +5,4 @@ app/views/*/*.php
 .buildpath
 .project
 .settings/*
+.htaccess
