@@ -15,7 +15,7 @@
       $this->set('content_items', $data['content']);
 
       $img_path = 'gallery';
-      $gallery_dir = opendir(get_config('ROOT_DIR').'/public/img/'.$img_path);
+      $gallery_dir = opendir(get_config('ROOT_DIR').'/'.get_config('IMG_PATH').'/'.$img_path);
       $photos = array();
       while ($photo = readdir($gallery_dir)) {
         if ($photo == '.' || $photo == '..') continue;
