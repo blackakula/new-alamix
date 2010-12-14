@@ -21,6 +21,8 @@ $menu_font: Arial;
   .item {
     width: $menu_item_w;
     float: left;
+    a .menu-text-inner { font-size: 10pt;}
+    a:hover .menu-text-inner { font-size: 13pt; }
   }
   .item-mid {
     width: $menu_mid_space;
@@ -52,8 +54,10 @@ $menu_font: Arial;
   width: $menu_item_w;
   text-align: center;
   font-family: $menu_font;
-  font-size: 10pt;
   display: block;
+}
+.menu-text-inner:hover {
+  font-size: 13pt;
 }
 
 .menu a:hover {
