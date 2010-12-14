@@ -33,8 +33,8 @@
       $menu = array(
           array('новини', 'news', true, '#'),
           array('медіа', 'media', false, '#'),
-          array('лінки', 'links', true, $r->build_path('links')),
-          array('фото', 'photo', false, $r->build_path('photo')),
+          array('фото', 'photo', true, $r->build_path('photo')),
+          array('лінки', 'links', false, $r->build_path('links')),
           array('аля про', 'contacts', true, '#')
       );
       if ($this->get('menu-replace')) {
